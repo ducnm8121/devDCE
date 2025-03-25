@@ -42,4 +42,12 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
+  document.addEventListener("DOMContentLoaded", function () {
+    const isLoggedIn = localStorage.getItem("isLoggedIn");
+
+    if (!isLoggedIn) {
+      alert("⚠️ Bạn cần đăng nhập trước!");
+      window.location.href = "../login.html";
+    }
+  });
 });

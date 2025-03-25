@@ -1,29 +1,31 @@
-// Tạo mảng users để lưu trữ tài khoản mặc định
-const users = [
-  { username: "admin", password: "123" },
-  { username: "user1", password: "123" },
-  { username: "user2", password: "123" },
-];
+document.addEventListener("DOMContentLoaded", function () {
+  const loginForm = document.getElementById("login-form");
 
-document.querySelector(".login-form").addEventListener("submit", function (e) {
-  e.preventDefault();
+  if (!loginForm) {
+    console.error(
+      "❌ Không tìm thấy form đăng nhập! Kiểm tra lại id của <form>."
+    );
+    return;
+  }
 
-  const username = document.getElementById("username").value;
-  const password = document.getElementById("password").value;
+  loginForm.addEventListener("submit", function (e) {
+    e.preventDefault();
 
-  // Kiểm tra đăng nhập
-  const user = users.find(
-    (u) => u.username === username && u.password === password
-  );
+    const username = document.getElementById("username").value.trim();
+    const password = document.getElementById("password").value.trim();
 
-  if (user) {
-    // Đăng nhập thành công
+    if (!username || !password) {
+      alert("⚠️ Vui lòng nhập đầy đủ thông tin!");
+      return;
+    }
+
+    // Giả lập đăng nhập thành công
     localStorage.setItem("username", username);
     localStorage.setItem("isLoggedIn", "true");
-    alert("Đăng nhập thành công!");
-    window.location.href = "pages/dashboard.html";
-  } else {
-    // Đăng nhập thất bại
-    alert("Sai tên đăng nhập hoặc mật khẩu!");
-  }
+
+    alert("✅ Đăng nhập thành công!");
+
+    // Chuyển hướng đến Dashboard
+    window.location.href = "../pages/dashboard.html";
+  });
 });

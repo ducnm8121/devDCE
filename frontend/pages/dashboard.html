@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard - DCE</title>
-    <link rel="stylesheet" href="../css/dashboard.css" />
+    <link rel="stylesheet" href="../assets/css/dashboard.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
@@ -13,44 +13,77 @@
   <body>
     <div class="dashboard-container">
       <!-- Header -->
-<!-- Header -->
-    <header class="header">
+      <header class="header">
         <div class="header-content">
-        <div class="logo">
+          <div class="logo">
             <img src="../assets/images/logo_dangnhap.png" alt="DCE Logo" />
-        </div>
-        <div class="welcome-text">Chào mừng đến với Hệ thống quản lý DCE</div>
-        <div class="user-info">
+          </div>
+          <div class="welcome-text">Chào mừng đến với Hệ thống quản lý DCE</div>
+          <div class="user-info">
             <span id="username-display">
-            <i class="fas fa-user"></i>
-            <span id="username-text">Admin</span>
+              <i class="fas fa-user"></i>
+              <span id="username-text">Admin</span>
             </span>
             <button class="logout-btn" id="logout-btn">Đăng xuất</button>
+          </div>
         </div>
-        </div>
-    </header>
+      </header>
 
-<!-- Navbar dưới header -->
-<nav class="navbar-container">
-    <a href="#" class="nav-item" onclick="loadPage('cap-report.html')">
-      <i class="fas fa-file-alt"></i> Báo cáo ca
-    </a>
-    <a href="tape-storage.html" class="nav-item">
-      <i class="fas fa-database"></i> Lưu trữ ape
-    </a>
-    <a href="access-history.html" class="nav-item">
-      <i class="fas fa-history"></i> Lịch sử ra vào
-    </a>
-  </nav>
-  
-        </div>
+      <!-- Navbar dưới header -->
+      <nav class="navbar-container">
+        <a
+          href="#"
+          class="nav-item"
+          onclick="loadPage('../pages/cap-report.html')"
+        >
+          <i class="fas fa-file-alt"></i> Báo cáo ca
+        </a>
+        <a
+          href="#"
+          class="nav-item"
+          onclick="loadPage('../pages/tape-storage.html')"
+        >
+          <i class="fas fa-database"></i> Lưu trữ Tape
+        </a>
+        <a
+          href="#"
+          class="nav-item"
+          onclick="loadPage('../pages/access-history.html')"
+        >
+          <i class="fas fa-history"></i> Lịch sử ra vào
+        </a>
+      </nav>
 
-        <!-- Content Area -->
-        <div class="content-area">
-          <iframe id="content-frame" src="cap-report.html" frameborder="0"></iframe>
-        </div>
-      </main>
+      <!-- Content Area -->
+      <div class="content-area">
+        <iframe
+          id="content-frame"
+          src="../pages/cap-report.html"
+          frameborder="0"
+        ></iframe>
+      </div>
     </div>
-    <script src="../js/dashboard.js"></script>
+
+    <script src="../assets/js/dashboard.js"></script>
+    <script>
+      function loadPage(page) {
+        document.getElementById("content-frame").src = page;
+      }
+
+      // Hiển thị username từ localStorage (nếu có)
+      document.addEventListener("DOMContentLoaded", function () {
+        const username = localStorage.getItem("username") || "Admin";
+        document.getElementById("username-text").textContent = username;
+      });
+
+      // Đăng xuất
+      document
+        .getElementById("logout-btn")
+        .addEventListener("click", function () {
+          localStorage.removeItem("username");
+          localStorage.removeItem("isLoggedIn");
+          window.location.href = "../login.html";
+        });
+    </script>
   </body>
 </html>
