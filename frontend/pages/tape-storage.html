@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lưu trữ Tape - DCE</title>
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/tape-storage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Header -->
+        <header class="header">
+            <!-- Copy header từ dashboard.html -->
+        </header>
+
+        <main class="main-content">
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <!-- Copy sidebar từ dashboard.html -->
+            </div>
+
+            <!-- Content Area -->
+            <div class="content-area">
+                <h2 class="page-title">Lưu trữ Tape</h2>
+                
+                <!-- Storage Statistics -->
+                <div class="storage-stats">
+                    <div class="stat-card">
+                        <h3>Tổng dung lượng</h3>
+                        <div class="value">1.5 TB</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Đã sử dụng</h3>
+                        <div class="value">750 GB</div>
+                        <div class="storage-bar">
+                            <div class="filled" style="width: 50%;"></div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Số lượng Tape</h3>
+                        <div class="value">25</div>
+                    </div>
+                </div>
+
+                <!-- Tape List -->
+                <div class="data-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Mã Tape</th>
+                                <th>Ngày lưu</th>
+                                <th>Dung lượng</th>
+                                <th>Trạng thái</th>
+                                <th>Thao tác</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>TAPE001</td>
+                                <td>2024-01-20</td>
+                                <td>500GB</td>
+                                <td><span class="status-badge complete">Hoạt động</span></td>
+                                <td class="action-icons">
+                                    <button class="icon-btn"><i class="fas fa-info-circle"></i></button>
+                                    <button class="icon-btn"><i class="fas fa-edit"></i></button>
+                                    <button class="icon-btn"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="../js/tape-storage.js"></script>
+</body>
+</html>

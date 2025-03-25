@@ -1,0 +1,125 @@
+/* ========== HEADER ========== */
+
+/* Định dạng thanh Header */
+.header {
+  display: flex;
+  align-items: center;
+  padding: 15px 25px;
+  background: #003366;
+  color: white;
+}
+
+/* Căn chỉnh giữa các phần */
+.header-content {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+/* Căn logo sát trái */
+.logo {
+  margin-right: auto;
+}
+
+.logo img {
+  height: 80px; /* Điều chỉnh kích thước logo */
+}
+
+/* Căn giữa phần tiêu đề */
+.welcome-text {
+  text-align: center;
+  flex-grow: 1; /* Để giữ nội dung luôn ở giữa */
+  font-size: 20px; /* Kích thước chữ */
+  font-weight: bold; /* Chữ đậm */
+}
+
+/* Đẩy user-info sang phải */
+.user-info {
+  margin-left: auto;
+  display: flex;
+  align-items: center; /* Căn giữa icon và text */
+  gap: 15px; /* Khoảng cách giữa các phần tử */
+  padding: 8px 15px;
+  border-radius: 8px; /* Bo góc nhẹ */
+  background: rgba(255, 255, 255, 0.1); /* Hiệu ứng nền trong suốt */
+  transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+/* Chữ Admin */
+#username-display {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Khoảng cách giữa icon và chữ */
+}
+
+#username-text {
+  font-size: 19px; /* Kích thước chữ */
+  font-weight: bold;
+  color: white; /* Giữ màu chữ trắng */
+  transition: color 0.3s ease-in-out;
+}
+
+/* Khoảng cách giữa icon user và chữ "Admin" */
+.user-info span {
+  margin-right: 15px;
+}
+
+/* Nút Đăng Xuất */
+.logout-btn {
+  background: #ff4d4d; /* Màu nền đỏ */
+  color: white; /* Chữ trắng */
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer; /* Hiển thị con trỏ khi di chuột vào */
+  border-radius: 5px; /* Bo góc */
+  transition: background 0.3s, transform 0.2s; /* Hiệu ứng hover */
+}
+
+/* Hiệu ứng hover cho nút Đăng xuất */
+.logout-btn:hover {
+  background: #cc0000; /* Đổi màu đậm hơn */
+  transform: scale(1.05); /* Phóng to nhẹ */
+}
+
+/* ========== NAVBAR (THANH MENU) ========== */
+
+/* Thanh điều hướng (Navbar) */
+.navbar-container {
+  display: flex; /* Sử dụng flexbox */
+  justify-content: space-around; /* Căn đều khoảng cách giữa các mục */
+  align-items: center; /* Căn giữa theo chiều dọc */
+  background: #cecfd3; /* Màu nền xám nhạt */
+  padding: 10px; /* Khoảng cách lề trong */
+  border-bottom: 3px solid #4caf50; /* Đường viền màu xanh lá phía dưới */
+}
+
+/* Các mục trong Navbar */
+.nav-item {
+  text-decoration: none; /* Loại bỏ gạch chân */
+  font-size: 16px; /* Kích thước chữ */
+  font-weight: bold; /* Chữ đậm */
+  color: #333; /* Màu chữ */
+  padding: 10px 20px; /* Khoảng cách lề */
+  transition: all 0.3s ease; /* Hiệu ứng hover */
+}
+
+/* Hiệu ứng hover cho các mục Navbar */
+.nav-item:hover {
+  background: #4caf50; /* Đổi màu nền sang xanh lá */
+  color: white; /* Đổi màu chữ thành trắng */
+  border-radius: 5px; /* Bo góc */
+}
+
+/* ========== CONTENT (NỘI DUNG CHÍNH) ========== */
+
+/* Khu vực hiển thị nội dung chính */
+.content-area {
+  text-align: center; /* Căn giữa nội dung */
+  padding: 50px; /* Khoảng cách lề trong */
+}
+
+#content-frame {
+  width: 100%;
+  height: 80vh; /* Chiều cao tự động */
+  border: none; /* Loại bỏ viền */
+}

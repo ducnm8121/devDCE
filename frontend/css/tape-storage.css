@@ -1,0 +1,46 @@
+/* Thêm vào file cap-report.css và tape-storage.css */
+
+/* Card hover effect */
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+/* Table row hover effect */
+.data-table tr:hover {
+  background-color: #f8f9fa;
+}
+
+/* Icon button hover animation */
+.icon-btn:hover i {
+  transform: scale(1.2);
+  transition: transform 0.2s ease;
+}
+
+/* Status badge glow effect */
+.status-badge {
+  position: relative;
+  overflow: hidden;
+}
+
+.status-badge::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: rotate(45deg);
+  animation: shine 2s infinite;
+}
+
+@keyframes shine {
+  0% {
+    transform: rotate(45deg) translateX(-100%);
+  }
+  100% {
+    transform: rotate(45deg) translateX(100%);
+  }
+}

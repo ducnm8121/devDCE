@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Danh sách hóa đơn</title>
+    <link rel="stylesheet" href="../assets/css/invoice-report.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Danh sách hóa đơn</h2>
+
+      <div class="table-container">
+        <table class="invoice-table">
+          <thead>
+            <tr>
+              <th>STT</th>
+              <th>Mã hóa đơn</th>
+              <th>Khách hàng</th>
+              <th>Ngày tạo</th>
+              <th>Trạng thái</th>
+              <th>Số tiền</th>
+              <th>Hành động</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>INV_1001</td>
+              <td>Paragon</td>
+              <td>2021-01-05</td>
+              <td class="status unpaid">Chưa thanh toán</td>
+              <td>$520.18</td>
+              <td>
+                <button class="view-btn">Xem</button>
+                <button class="edit-btn">Sửa</button>
+                <button class="delete-btn">Xóa</button>
+              </td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>INV_1002</td>
+              <td>Sonic</td>
+              <td>2021-01-04</td>
+              <td class="status paid">Đã thanh toán</td>
+              <td>$415.25</td>
+              <td>
+                <button class="view-btn">Xem</button>
+                <button class="edit-btn">Sửa</button>
+                <button class="delete-btn">Xóa</button>
+              </td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>INV_1003</td>
+              <td>Innercircle</td>
+              <td>2021-01-02</td>
+              <td class="status processing">Đang xử lý</td>
+              <td>$1324.84</td>
+              <td>
+                <button class="view-btn">Xem</button>
+                <button class="edit-btn">Sửa</button>
+                <button class="delete-btn">Xóa</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

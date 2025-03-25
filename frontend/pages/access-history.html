@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lịch sử ra vào - DCE</title>
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/access-history.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Header (giống dashboard.html) -->
+        <header class="header">...</header>
+
+        <main class="main-content">
+            <!-- Sidebar (giống dashboard.html) -->
+            <div class="sidebar">...</div>
+
+            <!-- Access History Content -->
+            <div class="content-area">
+                <h2 class="page-title">Lịch sử ra vào</h2>
+                <div class="action-bar">
+                    <button class="action-btn" id="export-history">
+                        <i class="fas fa-download"></i> Xuất báo cáo
+                    </button>
+                </div>
+                <div class="data-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Thời gian</th>
+                                <th>Người dùng</th>
+                                <th>Hoạt động</th>
+                                <th>Trạng thái</th>
+                            </tr>
+                        </thead>
+                        <tbody id="history-table-body">
+                            <!-- Data will be loaded by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+    
